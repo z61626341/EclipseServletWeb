@@ -10,20 +10,58 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
-      <servlet-name>FirstServlet</servlet-name>
-      <servlet-class>com.jimmy.ServletWeb.FirstServlet</servlet-class>
-      <init-param>
-          <param-name>message</param-name>
-          <param-value>Welcome to FirstServlet</param-value>
-      </init-param>
-      <init-param>
-          <param-name>encoding</param-name>
-          <param-value>utf-8</param-value>
-      </init-param>
-      <load-on-startup>1</load-on-startup>
+    <servlet-name>FirstServlet</servlet-name>
+    <servlet-class>com.jimmy.ServletWeb.FirstServlet</servlet-class>
+    <init-param>
+      <param-name>message</param-name>
+      <param-value>Welcome to FirstServlet</param-value>
+    </init-param>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
-      <servlet-name>FirstServlet</servlet-name>
-      <url-pattern>/hello</url-pattern>
+    <servlet-name>FirstServlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>IdentityServlet</servlet-name>
+    <servlet-class>com.jimmy.ServletWeb.IdentityServlet</servlet-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IdentityServlet</servlet-name>
+    <url-pattern>/servlet/IdentityServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>InitParamServlet</servlet-name>
+    <servlet-class>com.jimmy.ServletWeb.InitParamServlet</servlet-class>
+    <init-param>
+      <param-name>admin</param-name>
+      <param-value>admin</param-value>
+    </init-param>
+    <init-param>
+      <param-name>helloween</param-name>
+      <param-value>password</param-value>
+    </init-param>
+    <init-param>
+      <param-name>babyface</param-name>
+      <param-value>babyface</param-value>
+    </init-param>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitParamServlet</servlet-name>
+    <url-pattern>/servlet/InitParamServlet</url-pattern>
   </servlet-mapping>
 </web-app>

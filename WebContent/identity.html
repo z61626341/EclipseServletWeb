@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function reloadImage(){
+	document.getElementById('btn').disabled = true;
+	document.getElementById('IdentityServlet').src = 'servlet/IdentityServlet?ts=' + new Date().getTime();
+}
+</script>
+<meta charset="UTF-8">
+<title>My Identity</title>
+</head>
+<body>
+	<img src="/ServletWeb/servlet/IdentityServlet" id="IdentityServlet" onload="btn.disabled = false;"/>
+	<input type=button value = " 換個圖片 " onclick="reloadImage()" id="btn">
+</body>
+</html>
