@@ -64,4 +64,61 @@
     <servlet-name>InitParamServlet</servlet-name>
     <url-pattern>/servlet/InitParamServlet</url-pattern>
   </servlet-mapping>
+  <context-param>
+    <param-name>allowed file type</param-name>
+    <param-value>.gif,.jpg,.bmp</param-value>
+  </context-param>
+  <context-param>
+    <param-name>upload folder</param-name>
+    <param-value>attachment</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>ContextParamServlet</servlet-name>
+    <servlet-class>com.jimmy.ServletWeb.ContextParamServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContextParamServlet</servlet-name>
+    <url-pattern>/servlet/ContextParamServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>InjectionServlet</servlet-name>
+    <servlet-class>com.jimmy.ServletWeb.InjectionServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InjectionServlet</servlet-name>
+    <url-pattern>/servlet/InjectionServlet</url-pattern>
+  </servlet-mapping>
+  <env-entry>
+    <env-entry-name>hello</env-entry-name>
+    <env-entry-type>java.lang.String</env-entry-type>
+    <env-entry-value>Hello, Welcome to the JavaEE Resource Injection. </env-entry-value>
+  </env-entry>
+  <env-entry>
+    <env-entry-name>i</env-entry-name>
+    <env-entry-type>java.lang.Integer</env-entry-type>
+    <env-entry-value>30</env-entry-value>
+  </env-entry>
+  <env-entry>
+    <env-entry-name>persons</env-entry-name>
+    <env-entry-type>java.lang.String</env-entry-type>
+    <env-entry-value>Jimmy,Andy,Bill,Roses,</env-entry-value>
+  </env-entry>
+  
+  <servlet>
+    <servlet-name>SearchServlet</servlet-name>
+    <servlet-class>com.jimmy.ServletWeb.SearchServlet</servlet-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchServlet</servlet-name>
+    <url-pattern>/servlet/SearchServlet</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>
