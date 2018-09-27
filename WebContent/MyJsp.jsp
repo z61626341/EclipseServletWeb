@@ -7,6 +7,7 @@
 <title>This is Eclipse JSP</title>
 </head>
 <body>
+
 <%
     out.println("Hello World!");
 %>
